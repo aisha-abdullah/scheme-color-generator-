@@ -23,13 +23,14 @@ function fetchingData(){
 }
 
 function displayColor(){
+    if(colorArray.length === 5){
     let colorArrayHtml = ''
     colorArrayHtml = colorArray.map(color => 
         `<div>
             <div class='color' style=' background:${color.value}'></div>
             <p style=' background:white'>#${color.clean}</p>
         </div>`)
-    document.getElementById('scheme').innerHTML = colorArrayHtml.join('')
+    document.getElementById('scheme').innerHTML = colorArrayHtml.join('')}
 }
 document.getElementById('get-btn').addEventListener('click',fetchingData)
 
